@@ -189,3 +189,11 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+#custom ignores
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/.idea/spring-kafka-template.iml
+/springkafkatemplate.iml
+/.mvn/wrapper/maven-wrapper.properties
