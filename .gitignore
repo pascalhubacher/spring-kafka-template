@@ -197,3 +197,4 @@ buildNumber.properties
 /.idea/spring-kafka-template.iml
 /springkafkatemplate.iml
 /.mvn/wrapper/maven-wrapper.properties
+/src/test/java/com/mas2022datascience/springkafkatemplate/SpringkafkatemplateApplicationTests.java
