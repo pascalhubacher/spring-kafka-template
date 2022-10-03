@@ -8,7 +8,7 @@ import org.springframework.kafka.core.KafkaAdmin;
 import java.util.Map;
 
 @Configuration
-public class KafkaConfiguration {
+public class KafkaAdminConfig {
 
     @Bean
     public KafkaAdmin admin() {
