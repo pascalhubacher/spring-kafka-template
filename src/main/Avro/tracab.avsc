@@ -1,0 +1,14 @@
+{
+  "fields": [
+    {
+      "name": "quote",
+      "type": {
+        "avro.java.string": "String",
+        "type": "string"
+      }
+    }
+  ],
+  "name": "HobbitQuote",
+  "namespace": "com.mas2022datascience.avro.v1",
+  "type": "record"
+}

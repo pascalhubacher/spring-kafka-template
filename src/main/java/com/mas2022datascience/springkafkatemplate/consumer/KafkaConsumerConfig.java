@@ -6,6 +6,7 @@ import static org.apache.kafka.clients.consumer.ConsumerConfig.KEY_DESERIALIZER_
 import static org.apache.kafka.clients.consumer.ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG;
 import static org.apache.kafka.clients.consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG;
 
+import com.mas2022datascience.avro.v1.HobbitQuote;
 import java.util.Map;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -15,7 +16,8 @@ import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 
 public class KafkaConsumerConfig {
   @Bean
-  public ConsumerFactory<String, String> consumerFactory() {
+  //public ConsumerFactory<String, String> consumerFactory() {
+  public ConsumerFactory<String, HobbitQuote> consumerFactory() {
     return new DefaultKafkaConsumerFactory<>(consumerProperties());
   }
 
@@ -27,7 +29,9 @@ public class KafkaConsumerConfig {
         ENABLE_AUTO_COMMIT_CONFIG, false,
         SESSION_TIMEOUT_MS_CONFIG, 15000,
         KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class,
-        VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        //VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class
+        VALUE_DESERIALIZER_CLASS_CONFIG, io.confluent.kafka.serializers.KafkaAvroSerializer.class
+    );
   }
 
 }

@@ -11,11 +11,25 @@ public class Topics {
   // creates or alters the topic
   @Bean
   NewTopic main() {
-    return TopicBuilder.name("main").partitions(3).replicas(1).build();
+    return TopicBuilder.name("main")
+        .partitions(3)
+        .replicas(1)
+        .build();
+  }
+
+  @Bean
+  NewTopic hobbitAvro() {
+    return TopicBuilder.name("hobbit-avro")
+        .partitions(3)
+        .replicas(1)
+        .build();
   }
 
   @Bean
   NewTopic wordcount() {
-    return TopicBuilder.name("streams-wordcount-output").partitions(3).replicas(1).build();
+    return TopicBuilder.name("streams-wordcount-output")
+        .partitions(3)
+        .replicas(1)
+        .build();
   }
 }
