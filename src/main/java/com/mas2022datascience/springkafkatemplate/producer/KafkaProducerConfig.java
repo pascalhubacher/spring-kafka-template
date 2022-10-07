@@ -33,11 +33,6 @@ public class KafkaProducerConfig {
         ));
   }
 
-//  @Bean
-//  public KafkaTemplate<String, String> kafkaTemplate() {
-//    return new KafkaTemplate<>(producerFactory());
-//  }
-
   @Bean
   public KafkaTemplate<String, HobbitQuote> kafkaTemplate() {
     return new KafkaTemplate<>(producerFactory());
